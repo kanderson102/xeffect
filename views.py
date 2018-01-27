@@ -1,7 +1,7 @@
 from app import app
 from flask import render_template, request, jsonify
 from models import User
-from views import LoginForm
+from forms import LoginForm, SignupForm
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -21,4 +21,10 @@ def index():
 @app.route('/login')
 def login():
     form = LoginForm
-    return render_template('index.html', form=form)
+    return render_template('login.html', form=form)
+
+
+@app.route('/signup')
+def signup():
+    form = SignupForm
+    return render_template('signup.html', form=form)
