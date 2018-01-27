@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Xeffect</title>
+{% extends "base.html" %}
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block title %}Home{% endblock %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/styles.css"></link>
-</head>
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="/static/css/styles.css"></link>
+{% endblock %}
 
-<body>
-    <div>
+{% block content %}
+</br>
+    <div class="container" style="padding-top: 3em">
         <table id=grid style="width:80%">
           <tr>
             <th>Test</th>
@@ -66,7 +62,14 @@
         <input type="button" name="Submit" value="TEST">
     </div>
 
+{% endblock %}
 
+{% block scripts %}
+{{ super() }}
+<script src="/static/js/main.js"></script>
+{% endblock %}
+
+<!--
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -76,4 +79,4 @@
 
     <script src="./static/js/main.js"></script>
 </body>
-</html>
+</html> -->
