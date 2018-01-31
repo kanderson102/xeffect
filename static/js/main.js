@@ -14,7 +14,7 @@ function counter(change) {
     $.ajax({
         type: "POST",
         //the url where you want to sent the userName and password to
-        url: '/',
+        url: '/api/v1.0/toggle',
         dataType: 'json',
         contentType: 'application/json',
         // async: true,
